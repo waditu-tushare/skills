@@ -33,10 +33,6 @@ export TUSHARE_TOKEN="your_token_here"
 ```bash
 npx skills add https://gitee.com/lwdt/skills.git --skill tushare
 ```
-* 通过skills，安装github上的源码包
-```bash
-npx skills add  https://github.com/waditu-tushare/skills.git --skill tushare
-```
 
 ## 使用方法
 
@@ -60,11 +56,6 @@ npx skills add  https://github.com/waditu-tushare/skills.git --skill tushare
 **指数数据**：
 ```
 获取上证指数最近的行情数据
-```
-
-**宏观数据**：
-```
-查询最近一年的 GDP 和 CPI 数据
 ```
 
 ### 自动触发
