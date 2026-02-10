@@ -29,10 +29,6 @@ export TUSHARE_TOKEN="your_token_here"
 ### 3. 安装 Skill
 可以通过下面几种个方法（任何一种都可以）：
 * 将 tushare 目录复制到本地的 skills 目录：
-* 通过skills，安装gitee上的源包
-```bash
-npx skills add https://gitee.com/lwdt/skills.git --skill tushare
-```
 * 通过skills，安装github上的源码包
 ```bash
 npx skills add  https://github.com/waditu-tushare/skills.git --skill tushare
