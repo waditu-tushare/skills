@@ -2,6 +2,8 @@
 
 [Tushare Pro](https://tushare.pro) 金融数据获取 Skill，支持 220+ 个金融数据接口。
 
+Tushare 官方提供的SKILL工具包。
+
 ## 特性
 
 - 🎯 **全面的数据覆盖** - 支持 220+ 个 Tushare API 接口
@@ -17,21 +19,24 @@
 * 安装nodejs（如果需要skills管理本地包-npx命令）， https://nodejs.cn/download/
 * 安装tushare， https://tushare.pro/document/1?doc_id=7
 
+### 2. 安装 Tushare Skill
+可以通过下面几种个方法（任何一种都可以）：
+* 将 tushare 目录复制到本地的 skills 目录：
+* 通过skills，安装github上的源码包
+```bash
+npx skills add https://github.com/waditu-tushare/skills.git --skill tushare
+```
+* 通过skills，安装gitee上的源码包
+```bash
+npx skills add https://gitee.com/lwdt/skills.git --skill tushare
+```
 
-### 2. 配置 Token
+### 3. 配置 Token
 
 到 [Tushare 官网](https://tushare.pro) 注册账号并获取 API token：
 
 ```bash
 export TUSHARE_TOKEN="your_token_here"
-```
-
-### 3. 安装 Skill
-可以通过下面几种个方法（任何一种都可以）：
-* 将 tushare 目录复制到本地的 skills 目录：
-* 通过skills，安装github上的源码包
-```bash
-npx skills add  https://github.com/waditu-tushare/skills.git --skill tushare
 ```
 
 ## 使用方法
@@ -62,12 +67,6 @@ npx skills add  https://github.com/waditu-tushare/skills.git --skill tushare
 ```
 查询最近一年的 GDP 和 CPI 数据
 ```
-
-### 自动触发
-Skill 会在以下情况自动激活：
-- 用户请求股价、财务数据
-- 查询指数、基金、期货、债券
-- 获取宏观经济指标（GDP、CPI、利率等）
 
 ### 工具权限
 - `Bash(python:*)`: 允许执行 Python 代码
