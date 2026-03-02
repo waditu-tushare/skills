@@ -1,3 +1,10 @@
 .idea
 .agents
 .claude
+
+__pycache__
+*.pyc
+
+cache
+export
+logs
