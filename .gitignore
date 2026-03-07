@@ -2,6 +2,8 @@
 .agents
 .claude
 .py3.*
+.trae
+.claude
 
 __pycache__
 *.pyc
