@@ -40,8 +40,12 @@ export TUSHARE_TOKEN="your_token_here"
 
 ## 使用方法
 
-安装后，在 Claude Code 中直接对话：
+安装后并在本地智能体中加载该技能，之后可以用自然语言直接交流。
 
+支持 claude code, openclaw, trae 等所有的通用智能体。
+
+
+### 交互文本示例
 **获取股票数据**：
 ```
 获取平安银行最近 30 天的股价数据
