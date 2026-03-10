@@ -3,7 +3,7 @@
 .claude
 .py3.*
 .trae
-.claude
+.DS_Store
 
 __pycache__
 *.pyc
