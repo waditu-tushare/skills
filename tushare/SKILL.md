@@ -1,6 +1,11 @@
 ---
 name: tushare
 description: Tushare是全品类财经数据服务平台，拥有丰富的数据内容，如股票、基金、期货、数字货币等行情数据，公司财务、基金经理等基本面数据。该模块通过标准化API方式统一了数据资产的对外服务方式，以帮助有需要的技术用户更实时、便捷的使用相关数据。
+version: 1.1.1
+credentials:
+  - name: Tushare Token
+    type: string
+    description: Tushare Token，用于认证和授权访问Tushare数据服务。
 ---
 
 # Tushare
