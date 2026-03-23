@@ -8,12 +8,12 @@ credentials:
     description: Tushare Token，用于认证和授权访问Tushare数据服务。
     how_to_get: "https://tushare.pro/register",
 requirements:
-  python: >=3.7+
+  python: 3.7+
   packages:
     - name: tushare
   environment_variables:
     - name: TUSHARE_TOKEN
-      required: true
+      required: false
       sensitive: true
   network_access: true
 ---
