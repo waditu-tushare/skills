@@ -6,7 +6,7 @@ version: 1.1.6
 credentials:
   - name: TUSHARE_TOKEN
     description: Tushare Token，用于认证和授权访问Tushare数据服务。
-    how_to_get: "https://tushare.pro/register",
+    how_to_get: "https://tushare.pro/register"
 requirements:
   python: 3.7+
   packages:
