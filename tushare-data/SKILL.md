@@ -2,7 +2,7 @@
 name: tushare-data
 description: 面向中文自然语言的 Tushare 数据研究技能。用于把“看看这只股票最近怎么样”“帮我查财报趋势”“最近哪个板块最强”“北向资金在买什么”“给我导出一份行情数据”这类请求，转成可执行的数据获取、清洗、对比、筛选、导出与简要分析流程。适用于 A 股、指数、ETF/基金、财务、估值、资金流、公告新闻、板块概念与宏观数据等研究场景。
 author: tushare.pro
-version: 1.1.9
+version: 1.1.11
 credentials:
   - name: TUSHARE_TOKEN
     description: Tushare Token，用于认证和授权访问Tushare数据服务。
@@ -165,7 +165,7 @@ requirements:
 
 1. 检查 Python 是否可用， 版本要求 3.7+
 2. 检查 `tushare` 包是否已安装·
-3. 检查 `TUSHARE_TOKEN` 是否存在, 或者运行py脚本`import tushare as ts; print(ts.get_token())"`检查本地是否已配置
+3. 检查 `TUSHARE_TOKEN` 是否存在.
 4. 必要时做一次轻量接口冒烟测试（如交易日历 / 基础接口）
 5. 如用户请求高权限接口，提前提示可能存在积分/权限限制
 
