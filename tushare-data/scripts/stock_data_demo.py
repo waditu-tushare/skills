@@ -5,14 +5,9 @@
 """
 
 import tushare as ts
-import pandas as pd
-import os
-
-# 读取环境变量中的token, 或者读取本地记录的token
-token = os.getenv('TUSHARE_TOKEN') or ts.get_token()
 
 # 初始化pro接口
-pro = ts.pro_api(token)
+pro = ts.pro_api()
 
 
 def get_stock_list():
