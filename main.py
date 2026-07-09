@@ -51,6 +51,7 @@ def parse_df_recursive(df: pd.DataFrame, parent_id: int, parent_titles: list[str
             docs.append({
                 'id': node.id,
                 'key': node.key,
+                'name': node.name,
                 'title': f'[{node.name}]({node.file_path})',
                 'categories': ','.join(node.categories),
                 'desc': node.desc,
@@ -71,7 +72,7 @@ def create_dir_file_recursive(children: list[Node], path: str):
 
 def main():
     # 读取csv文件，头信息为：ID, PARENT_ID, TITLE, SRC_CONTENT(markdown格式)
-    df = pd.read_csv('data/api-doc.csv.csv')
+    df = pd.read_csv('data/api-doc.csv')
     # title 转为 name， 作为文件路径和文件名
     df['TITLE'] = df['TITLE'].str.replace(r'[<>:"/\\|?*]', '', regex=True)
     df['TITLE'] = df['TITLE'].str.replace('（', '(').str.replace('）', ')')
@@ -92,14 +93,16 @@ def main():
 
     # 生成markdown
     df_md = pd.DataFrame(docs)
+    df_md['id'] = "https://tushare.pro/wctapi/documents/" + df_md['id'].astype(str) + '.md'
     df_md.sort_values(by=['categories'], inplace=True)
     df_md.rename(columns={
-        'id': 'ID',
-        'title': '标题(详细文档)',
+        'id': '在线文档',
+        'name': '标题',
         'key': '接口名',
         'categories': '分类',
         'desc': '描述'
     }, inplace=True)
+    df_md = df_md[["在线文档", "接口名", "标题", "分类", "描述"]]
     df_md.to_markdown('data/docs.md', index=False)
 
 
